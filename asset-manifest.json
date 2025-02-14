@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Doggy-Match-Maker/static/css/main.d14de51e.css",
-    "main.js": "/Doggy-Match-Maker/static/js/main.0fc31832.js",
+    "main.js": "/Doggy-Match-Maker/static/js/main.e877f1ac.js",
     "static/media/dog-background.jpg": "/Doggy-Match-Maker/static/media/dog-background.06de28097d83e69e476f.jpg",
     "static/media/dogs-playing.jpg": "/Doggy-Match-Maker/static/media/dogs-playing.0a9feb4f5dcefe362a33.jpg",
     "index.html": "/Doggy-Match-Maker/index.html",
     "main.d14de51e.css.map": "/Doggy-Match-Maker/static/css/main.d14de51e.css.map",
-    "main.0fc31832.js.map": "/Doggy-Match-Maker/static/js/main.0fc31832.js.map"
+    "main.e877f1ac.js.map": "/Doggy-Match-Maker/static/js/main.e877f1ac.js.map"
   },
   "entrypoints": [
     "static/css/main.d14de51e.css",
-    "static/js/main.0fc31832.js"
+    "static/js/main.e877f1ac.js"
   ]
 }
