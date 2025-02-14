@@ -42,6 +42,12 @@
   white-space: nowrap;
 }
 
+.filter-btn:hover {
+  background-color: rgb(213, 216, 216);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+
 .filter-btn-sort {
   width: 150px;
 }
