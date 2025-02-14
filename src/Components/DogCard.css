@@ -1,6 +1,6 @@
 .box {
   height: 350px;
-  width: auto;
+  width: 675px;
   display: flex;
   border: 5px groove rgb(124, 119, 119);
   padding: 50px;
