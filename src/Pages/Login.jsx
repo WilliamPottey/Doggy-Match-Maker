@@ -14,6 +14,7 @@ function Login() {
     inputRef.current.focus();
   }, [navigate]);
 
+  // Logic executes when the user presses the login button
   const onClickLogin = async () => {
     const loginRequest = new Request(
       "https://frontend-take-home-service.fetch.com/auth/login",

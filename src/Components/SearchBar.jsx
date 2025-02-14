@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "./SearchBar.css";
 
 function SearchBar(props) {
-  const [filterMenuVisible, setFilterMenuVisible] = useState(false);
-  const [filteredBreeds, setFilteredBreeds] = useState([]);
-  const breedRef = useRef();
+  const [filterMenuVisible, setFilterMenuVisible] = useState(false); // State to determine if filter box displays
+  const [filteredBreeds, setFilteredBreeds] = useState([]); // state that holds an array of selected breeds ti filter by
+  const breedRef = useRef(); // Reference of all available Breeds
   const navigate = useNavigate();
 
   // Gets list of available breeds for filtering purposes
@@ -26,7 +26,6 @@ function SearchBar(props) {
       try {
         const response = await fetch(breedRequest);
         const result = await response.json();
-        console.log("breeds:", result);
         breedRef.current = result;
       } catch (error) {
         console.error("Error Fetching Breeds", error);
@@ -75,10 +74,12 @@ function SearchBar(props) {
     setFilterMenuVisible(false);
   };
 
+  // Clears all filters from the filter array
   const onClickClearFilters = () => {
     setFilteredBreeds([]);
   };
 
+  // Calls the function that reverses the sort order from Asc to Desc
   const swapSortOrder = () => {
     props.sortOrder();
   };

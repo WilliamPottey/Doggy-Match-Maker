@@ -2,7 +2,7 @@ import React from "react";
 import "./MatchBox.css";
 
 function Match(props) {
-  console.log(props.matchData.img);
+  // Calls lopic for the Start Over Button
   const onClickStartOver = () => {
     props.reset();
   };

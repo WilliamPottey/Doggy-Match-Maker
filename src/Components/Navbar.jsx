@@ -6,6 +6,7 @@ import "./Navbar.css";
 function Navbar() {
   const navigate = useNavigate();
 
+  // Executes the logout request and sends the user back to the login screen
   const onClickLogout = async () => {
     const logoutRequest = new Request(
       "https://frontend-take-home-service.fetch.com/auth/logout",

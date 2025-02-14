@@ -152,7 +152,6 @@ function Dogs() {
 
   // gets list of dog objects based on the list of dog Ids previously retrieved
   const fetchDogObjects = async (dogsToFetch, calledFrom) => {
-    console.log("dog to fetch:", dogsToFetch, " Called from:", calledFrom);
     const dogObjectRequest = new Request(
       "https://frontend-take-home-service.fetch.com/dogs",
       {
@@ -173,7 +172,6 @@ function Dogs() {
         setFavDogs(result);
       } else if (calledFrom === "match") {
         setMatch(result);
-        console.log("Match Object:", match);
       } else {
         setDogs(result);
       }
@@ -316,7 +314,6 @@ function Dogs() {
     try {
       let response = await fetch(matchRequest);
       let result = await response.json();
-      console.log("Match:", result);
       fetchDogObjects([result.match], "match");
     } catch (error) {
       console.error("error getting match:", error);
@@ -324,14 +321,15 @@ function Dogs() {
     }
   };
 
+  // Logic to dislplay favorite dogs when pressing the Show Favorites button
   const displayFavorites = () => {
     if (favorites.length > 0) {
       fetchDogObjects(favorites, "fav");
     }
-    console.log("display favorites");
     setShowOnlyFavs(true);
   };
 
+  // Logic to display all Dogs after pressing the SHow All button
   const displayAll = () => {
     setShowOnlyFavs(false);
   };
