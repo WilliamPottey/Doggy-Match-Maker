@@ -1,12 +1,15 @@
 .login-body {
   margin: auto;
   height: 100vh;
+  width: 100vw;
   background-image: url("./images/dogs-playing.jpg");
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: fixed;
+  overflow-y: auto;
 }
 
 .login-width {
@@ -17,7 +20,7 @@
 .input-style {
   display: flex;
   margin: auto;
-  width: 75vh;
+  width: 500px;
   border: none;
   appearance: none;
   background-color: rgb(248, 245, 245);
@@ -27,7 +30,9 @@
 
 .login-box {
   height: 400px;
-  width: 80vh;
+  width: 650px;
+  min-width: 650px;
+  min-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +50,7 @@
 
 .login-button {
   margin: auto;
-  width: 20vh;
+  width: 175px;
   padding: 8px;
   border-radius: 5px;
   border: 1px solid rgb(182, 177, 177);
