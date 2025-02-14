@@ -22,6 +22,7 @@ function Navbar() {
       const response = await fetch(logoutRequest);
       if (response.status !== 200) {
         console.error("Error");
+        navigate("/login");
       } else {
         navigate("/login");
       }
