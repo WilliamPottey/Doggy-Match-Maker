@@ -1,0 +1,122 @@
+.body {
+  background-image: url("./images/dog-background.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  margin-top: 106px;
+  overflow-x: hidden;
+}
+
+.body-fav {
+  background-image: url("./images/dog-background.jpg");
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: 0;
+  row-gap: 0px;
+  position: absolute;
+  width: 100vw;
+  margin-top: 106px;
+}
+
+.top-padding {
+  padding-top: 500px;
+}
+
+.background {
+  background-image: url("./images/dog-background.jpg");
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gap {
+  width: 20px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.page-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+button {
+  margin: 10px;
+}
+
+.page-change-button {
+  padding: 10px;
+  width: 30vh;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.page-change-button:hover {
+  background-color: rgb(191, 192, 192);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+
+.match-button {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.match-button:hover {
+  background-color: greenyellow;
+}
+
+.show-fav-button {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.show-fav-button:hover {
+  background-color: greenyellow;
+}
+
+.disabled-button {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bold;
+  margin-right: 10px;
+}

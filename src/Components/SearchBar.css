@@ -1,0 +1,101 @@
+.search {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(0, 179, 255);
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.welcome-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  color: rgb(238, 234, 234);
+  margin-left: 50px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  white-space: nowrap;
+  height: 50px;
+}
+
+.filter-top-section {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 350px;
+  height: 50px;
+  border: 2px black solid;
+}
+
+.filter-btn {
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.filter-btn-sort {
+  width: 150px;
+}
+
+.filter-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-btn-main {
+  margin-right: 100px;
+}
+
+.filter-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-body {
+  height: 75vh;
+  width: 350px;
+  background-color: rgb(212, 212, 212);
+  border: 2px black solid;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+.breed-choice-box-unselected {
+  height: 50px;
+  width: 225px;
+  border: 5px solid black;
+  border: 2px solid;
+  background-color: rgb(255, 255, 255);
+  overflow-wrap: break-word;
+}
+
+.breed-choice-box-selected {
+  height: 50px;
+  width: 225px;
+  border: 5px solid black;
+  border: 2px solid;
+  background-color: rgb(106, 195, 236);
+  overflow-wrap: break-word;
+}
+
+.breed-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.apply-button {
+  position: fixed;
+  margin-left: 50px;
+}

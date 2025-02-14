@@ -1,0 +1,21 @@
+.logout-button {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.logout-button:hover {
+  background-color: rgb(213, 216, 216);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+
+.test {
+  width: 100%;
+  background-color: red;
+  height: max-content;
+}
+
+nav {
+  margin-bottom: 0;
+}
