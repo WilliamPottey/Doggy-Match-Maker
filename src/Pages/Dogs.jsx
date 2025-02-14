@@ -22,7 +22,6 @@ function Dogs() {
   const nextRef = useRef(); // stores suffix of API URL for next page of Dogs
   const prevRef = useRef(); // stores suffix of API URL for previous page of Dogs
   const sortDirectionRef = useRef("asc"); // stores the current sort direction, either "asc" for ascending or "desc" for descending
-  const scrollRef = useRef(null);
 
   const initialDogRequest_1 = new Request(
     `https://frontend-take-home-service.fetch.com/dogs/search?sort=breed:${sortDirectionRef.current}`,
@@ -71,7 +70,6 @@ function Dogs() {
     nextRef.current = null;
     prevRef.current = null;
     sortDirectionRef.current = "asc";
-    scrollRef.current = null;
     onEnter();
     resetAuthCookie(location.state.name, location.state.email);
   };
@@ -115,7 +113,7 @@ function Dogs() {
       fetchDogObjects(resultIdsRef.current);
       checkForNextRef();
       checkForPrevRef();
-      scrollRef.current.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "instant" });
     } catch {
       console.error("Error: Failed to get Next page");
       showTimeOutAlert();
@@ -145,7 +143,7 @@ function Dogs() {
       fetchDogObjects(resultIdsRef.current);
       checkForNextRef();
       checkForPrevRef();
-      scrollRef.current.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "instant" });
     } catch {
       console.error("Error: Failed to get Previous page");
       showTimeOutAlert();
@@ -223,7 +221,7 @@ function Dogs() {
       fetchDogObjects(resultIdsRef.current);
       checkForNextRef();
       checkForPrevRef();
-      scrollRef.current.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "instant" });
     } catch {
       console.error("Error: Failed to get Filtered Dogs");
       showTimeOutAlert();
@@ -295,7 +293,7 @@ function Dogs() {
       fetchDogObjects(resultIdsRef.current);
       checkForNextRef();
       checkForPrevRef();
-      scrollRef.current.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "instant" });
     } catch {
       showTimeOutAlert();
     }
@@ -356,7 +354,7 @@ function Dogs() {
           sortOrderVal={sortDirectionRef.current}
         />
       </div>
-      <div ref={scrollRef} className={!showOnlyFavs ? "body" : "body-fav"}>
+      <div className={!showOnlyFavs ? "body" : "body-fav"}>
         <br />
         <br />
         <div className="flex-row">
