@@ -5,7 +5,7 @@ import Dogs from "./Pages/Dogs";
 function App() {
   return (
     <>
-      <HashRouter hashType="noslash">
+      <HashRouter>
         <Routes>
           <Route index element={<Login />} />
           <Route path="/login" element={<Login />} />
