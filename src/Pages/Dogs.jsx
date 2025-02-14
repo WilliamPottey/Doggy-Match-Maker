@@ -69,7 +69,6 @@ function Dogs() {
     resultIdsRef.current = null;
     nextRef.current = null;
     prevRef.current = null;
-    sortDirectionRef.current = "asc";
     onEnter();
     resetAuthCookie(location.state.name, location.state.email);
   };
