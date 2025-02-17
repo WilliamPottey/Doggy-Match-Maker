@@ -56,7 +56,7 @@ function Dogs() {
     onEnter();
   }, []);
 
-  // If user starts over after dingind a match, reset fav and maatch states and reset Auth Cookie
+  // If user starts over after finding a match, reset fav and match states and reset Auth Cookie
   const resetAll = () => {
     setFavDogs(null);
     setFavorites([]);
