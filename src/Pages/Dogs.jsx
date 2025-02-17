@@ -12,9 +12,9 @@ function Dogs() {
   const [favorites, setFavorites] = useState([]); // stores list of favorited dog ids for match making
   const [match, setMatch] = useState(null); // Stores the dog object of the Match found
   const [isPrevDisabled, setIsPrevDisabled] = useState(true); // Flag for showing the previous page button
-  const [isNextDisabled, setIsNextDisabled] = useState(false); // flag for showing the next page button
-  const [currentFilter, setCurrentFilter] = useState("");
-  const [showOnlyFavs, setShowOnlyFavs] = useState(false);
+  const [isNextDisabled, setIsNextDisabled] = useState(false); // Flag for showing the next page button
+  const [currentFilter, setCurrentFilter] = useState(""); // Holds filtered dogs to determione what breeds to display
+  const [showOnlyFavs, setShowOnlyFavs] = useState(false); // Flag to determine if we show All Dogs or just Favorite Dogs
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -56,7 +56,7 @@ function Dogs() {
     onEnter();
   }, []);
 
-  // If user starts over after finding a match, reset fav and match states and reset Auth Cookie
+  // If user starts over after finding a match, reset favorites and match states and reset Auth Cookie. User's filters and sort dirextion stay the same.
   const resetAll = () => {
     setFavDogs(null);
     setFavorites([]);
@@ -65,6 +65,7 @@ function Dogs() {
     resetAuthCookie(location.state.name, location.state.email);
   };
 
+  // This resets the user's Auth Cookie upon finding a match and choosing to start over.
   const resetAuthCookie = async (name, email) => {
     const loginRequest = new Request(
       "https://frontend-take-home-service.fetch.com/auth/login",

@@ -4,7 +4,7 @@ import "./SearchBar.css";
 
 function SearchBar(props) {
   const [filterMenuVisible, setFilterMenuVisible] = useState(false); // State to determine if filter box displays
-  const [filteredBreeds, setFilteredBreeds] = useState([]); // state that holds an array of selected breeds ti filter by
+  const [filteredBreeds, setFilteredBreeds] = useState([]); // state that holds an array of selected breeds to filter by
   const breedRef = useRef(); // Reference of all available Breeds
   const navigate = useNavigate();
 
