@@ -61,6 +61,7 @@ function Dogs() {
     setFavDogs(null);
     setFavorites([]);
     setMatch(null);
+    setShowOnlyFavs(false);
     resetAuthCookie(location.state.name, location.state.email);
   };
 
