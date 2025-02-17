@@ -56,20 +56,11 @@ function Dogs() {
     onEnter();
   }, []);
 
-  // If user starts over after dingind a match, reset all states and references and call the initial request and reset Auth Cookie
+  // If user starts over after dingind a match, reset fav and maatch states and reset Auth Cookie
   const resetAll = () => {
-    setDogs(null);
     setFavDogs(null);
     setFavorites([]);
     setMatch(null);
-    setIsNextDisabled(false);
-    setIsPrevDisabled(true);
-    setCurrentFilter("");
-    setShowOnlyFavs(false);
-    resultIdsRef.current = null;
-    nextRef.current = null;
-    prevRef.current = null;
-    onEnter();
     resetAuthCookie(location.state.name, location.state.email);
   };
 
